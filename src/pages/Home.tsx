@@ -16,9 +16,11 @@ import { products } from "../data/products";
 
 // pas deze imports aan naar jouw bestandsnamen
 // import bigLogo from "../assets/brand/logo-big.png";
-import heroImg from "../assets/brand/hero.jpg";
+import heroImg from "../assets/brand/hero.jpeg";
 import Spline from "@splinetool/react-spline";
 import bigLogo2D from "../assets/brand/text-rond.png";
+
+
 
 
 export default function Home() {
@@ -38,7 +40,7 @@ export default function Home() {
           />
 
           {/* Donkere overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10 " />
 
           {/* Text overlay */}
           <div className="relative z-10 p-6 md:p-8 max-w-sm">
@@ -79,11 +81,11 @@ export default function Home() {
 
       {/* LATEST DROPS */}
       <section>
-        <h3 className="text-center  text-2xl font-semibold tracking-wide text-black/70 mb-6">
+        <h3 className="text-center  text-2xl font-semibold tracking-wide text-black/70  mb-6">
           Latest drops
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {latest.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
