@@ -34,7 +34,7 @@ export default function ProductCard({ product }: Props) {
 
     // Link naar de product detail pagina voor dit specifieke product hele kaart is klikbaar
     <Link
-      to={`/ProductDetail/${product.id}`}
+      to={`/product/${product.id}`}
       className="group block rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition border border-black/10"
     >
       <div className="relative w-full aspect-square">
