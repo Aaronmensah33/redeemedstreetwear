@@ -1,7 +1,7 @@
 {
   "name": "redeemedstreetwear",
   "homepage": "https://Aaronmensah33.github.io/redeemedstreetwear/",
-  "private": true,
+  "private": "false",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
