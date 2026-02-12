@@ -17,9 +17,15 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import About from "./pages/About";
 import Products from "./pages/Products";
-import ProductDetail from "./pages/ProductDetail";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import Success from "./pages/Success";
+import Login from "./pages/Login";
+import Account from "./pages/Account";
+import ProtectedRoute from "./components/ProtectedRoute";
+import TestPage from "./pages/Oefeningen/TestPage";
 
 function App() {
   /* NavLink geeft automatisch een object met { isActive }
@@ -38,11 +44,12 @@ function App() {
 
   return (
     // De hele pagina
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black flex flex-col">
       <Header />
 
-      <main className="mx-auto max-w-6xl px-6 py-8">
-
+      <main className="flex-1 w-full">
+        {/* mx-auto max-w-6xl px-6 py-8 */}
+<div className="mx-auto max-w-6xl px-6 py-8">
           {/* Routes bepalen welke pagina getoond wordt 
           als je naar / gaat toon Home component
           als je naar /products gaat toon Products component
@@ -53,13 +60,26 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
           {/* :id = dynamisch stuk, kan van alles zijn, in Product pagina kunnen we dat id gebruiken om te weten welk product we moeten tonen */}
-          <Route path="/ProductDetail/:id" element={<ProductDetail />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/login" element={<Login />} />
+<Route
+  path="/account"
+  element={
+    <ProtectedRoute>
+      <Account />
+    </ProtectedRoute>
+  }
+/>
+<Route path="/test" element={<TestPage />} />
         </Routes>
-
+</div>
         {/*Alleen dit <main> stuk wisselt */}
       </main>
+
+      <Footer />
     </div>
   );
 }
