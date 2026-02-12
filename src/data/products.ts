@@ -30,6 +30,12 @@ export const products: Product[] = [
     imageFront: VersityVoor,
     imageBack: VersityAchter,
     description: "Comfortable blue Versity Jacket with Redeemed branding.",
+    category: "jacket",
+        variants: [
+      { id: "vj-blue-s", size: "S", color: "Blue", stock: 4 },
+      { id: "vj-blue-m", size: "M", color: "Blue", stock: 2 },
+      { id: "vj-blue-l", size: "L", color: "Blue", stock: 0 },
+    ],
   },
   {
     id: "cardigan",
@@ -38,6 +44,12 @@ export const products: Product[] = [
     imageFront: CardiganVoor,
     imageBack: CardiganAchter,
     description: "Clean cardigan, perfect for everyday wear.",
+    category: "vest",
+    variants: [
+      { id: "cardigan-s", size: "S", color: "Grey", stock: 5 },
+      { id: "cardigan-m", size: "M", color: "Grey", stock: 3 },
+      { id: "cardigan-l", size: "L", color: "Grey", stock: 0 },
+    ],
   },
   {
     id: "hoodie-black",
@@ -46,5 +58,11 @@ export const products: Product[] = [
     imageFront: HoodieBlackVoor,
     imageBack: HoodieBlackAchter,
     description: "Black hoodie with minimal logo.",
+    category: "hoodie",
+    variants: [
+      { id: "hoodie-black-s", size: "S", color: "Black", stock: 6 },
+      { id: "hoodie-black-m", size: "M", color: "Black", stock: 4 },
+      { id: "hoodie-black-l", size: "L", color: "Black", stock: 1 },
+    ],
   },
 ];
